@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="static/js/chatbot.js"></script>
+    <link rel="stylesheet" href="static/styles/chatbot.css">
+    <title>Hey Livingston!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/static/js/ie-emulation-modes-warning.js"></script>
+    <script src="/static/js/transition.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+    <style type="text/css">
+    #imgbox 
+    {
+
+        position : absolute;
+        top:10%;
+        border: 1px solid #999;
+        background : #FFFFFF; 
+        filter: Alpha(Opacity=100);
+        visibility : hidden;
+        height : 300px;
+        width : 300px;
+        z-index : 50;
+        overflow : hidden;
+        text-align : center;
+    }
+
+    #trending 
+    {
+
+        position : absolute;
+        top:15%;
+        left:75%;
+        filter: Alpha(Opacity=100);
+        height : 300px;
+        width : 300px;
+        z-index : 50;
+        overflow : hidden;
+        text-align : center;
+    }
+
+    div.scrollmenu {
+        display:none;
+        overflow: auto;
+        white-space: nowrap;
+    }
+
+    div.scrollmenu a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 2px;
+        text-decoration: none;
+    }
+
+    div.scrollmenu a:hover {
+        background-color: #777;
+        
+    } 
+
+
+    .date_tag{
+      color:blue;
+      font-family: "Courier New", Courier, monospace;
+  }
+  .title_tag{
+      font-family: 'Times New Roman';
+      font-weight: 600;
+  }
+</style>
+
+
+
+<!-- Bootstrap core CSS -->
+<link href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" rel="stylesheet">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="{{ url_for('static',filename='styles/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
+<script type="text/javascript" src="/static/js/lauthors_titles.js"> </script> 
+
+<!-- Custom styles for this template -->
+<link href="{{ url_for('static',filename='styles/jumbotron.css') }}" rel="stylesheet">
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body onload="return startbot();">
+
+  <nav id="mainNav" class="navbar navbar-inverse navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll name" href="http://www.gw.iucaa.in/">Hosted at IUCAA</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="navbar-brand page-scroll" href="/">Home</a>
+                </li>
+                <li>
+                    <a class="navbar-brand page-scroll" href="/lauthors_titles">LLO</a>
+                </li>
+                <li>
+                    <a class="navbar-brand page-scroll" href="/hauthors_titles">LHO</a>
+                </li>
+
+                <li>
+                    <a class="navbar-brand page-scroll" href="/vauthors_titles">Virgo</a>
+                </li>
+
+                <li>
+                    <a class="navbar-brand page-scroll" href="/gauthors_titles">GEO600</a>
+                </li>
+
+                <li>
+                    <a class="navbar-brand page-scroll" href="/make_report">All</a>
+                </li>
+                <li>
+                    <a class="navbar-brand page-scroll" href="/alerts">Alerts</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+    <!--
+    <nav class="navbar-inverse navbar-fixed-top">
+
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.gw.iucaa.in/">Hosted at IUCAA </a>
+        </div>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">HOME</a>
+        </div>
+       <div class="navbar-header">
+          <a class="navbar-brand" href="/lauthors_titles">LLO</a>
+        </div>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/hauthors_titles">LHO</a>
+        </div>
+          <div class="navbar-header">
+          <a class="navbar-brand" href="/vauthors_titles">VIRGO</a>
+        </div>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/make_report">Reports</a>
+        </div>
+
+    </nav> -->
+    
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+
+      <div class="container-fluid">
+          <h1 class='text-center'>Hey Livingston!</h1>
+          <br>
+          <br>
+          <br>
+
+          <form id ='voice_search' class="navbar-form text-center has-success has-feedback" role="search">
+              <i id='microphone' class="fa fa-microphone input-group add-on col-md-1" style="color:grey;font-size:30px" onclick="startDictation()"></i>
+              <div class="input-group add-on col-md-6">
+                  <input class="form-control input-md" spellcheck='true' placeholder="Calibration lines "  id="srch-term" type="text">
+                  <div class="input-group-btn">
+                    <button type='button' id='srch' onclick='sort_by_relevance()' class="btn btn-success input-md col-md-8">
+                      <span class="glyphicon glyphicon-search"></span> Search
+                  </button>
+                  
+              </div>
+          </div>
+      </form>
+
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <!-- Example row of columns -->
+  <div id='img' class="scrollmenu">  
+  </div>
+  <div id="imgbox"></div>
+
+  <div id='trending'>
+      <h3 class='text-left'><i class="fa fa-line-chart" aria-hidden="true"></i> Today's Trending </h3>
+      <ol class='text-left'>
+          {% for t in trend %}
+          <li><a href='{{"https://alog.ligo-la.caltech.edu/aLOG/iframeSrc.php?authExpired=&content=1&step=&callRep=%s&startPage=&preview=&printCall=&callUser=&addCommentTo=&callHelp=&callFileType=#"%t[1]}}' target='_blank'>{{ t[0]+"  "}}</li></a>
+          {% endfor %}
+      </ol>
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h2 class='title_tag'>Related Posts</h2>
+              <div class="input-group-btn">
+                <button onclick="sort_by_time()" id='rec' class="btn btn-alert">
+                  <span class="glyphicon glyphicon-sort"></span> Recent
+              </button>
+              <button onclick="sort_by_relevance()" id='rel' class="btn btn-alert">
+                  <span class="glyphicon glyphicon-sort"></span> Relevance
+              </button>
+          </div>
+      </div>
+      <div class="list-group" id='RelatedPost'>
+      </div>
+      <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+  </div>
+</div>
+<input id='auth1' style="display: none">
+<input id='auth2' style="display: none">
+<input id='auth3' style="display: none">
+<input id='auth4' style="display: none">
+<div class="col-md-3">
+  <div class="panel panel-default">
+      <div class="panel-heading">
+          <h2 class='title_tag' id='authtitletag'>Top Authors</h2>
+          <div class="input-group-btn">
+            <button onclick="sort_by_time()" id='authrec' class="btn btn-alert">
+              <span class="glyphicon glyphicon-sort"></span> Recent
+          </button>
+          <button onclick="sort_by_relevance()" id='authrel' class="btn btn-alert">
+              <span class="glyphicon glyphicon-sort"></span> Relevance
+          </button>
+      </div>
+      <br>
+      <div class="input-group-btn" id="authorlist">
+      </div>
+  </div>
+  <div class="list-group" id='Auth'>
+  </div>
+  <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+</div>
+</div>
+
+
+<div class="col-md-3">
+ <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class ='title_tag' id='DCCtag'>DCC</h2>
+  </div>
+  <div  class="list-group" id='DCC'>
+  </div>
+  <!--    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+</div>
+</div>        
+<input id='dccauth1' style="display: none">
+<input id='dccauth2' style="display: none">
+<input id='dccauth3' style="display: none">
+<input id='dccauth4' style="display: none">
+<div class="col-md-3">
+ <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class ='title_tag' id='dccAuthtitleTag'>Top DCC Authors</h2>
+      <div class="input-group-btn" id="dccauthorlist">
+      </div>
+  </div>
+  <div  class="list-group" id='dccAuth'>
+  </div>
+  <!--    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+</div>
+</div>        
+</div> 
+
+<hr>
+<div class='row'>
+  <footer class='footer1'>
+     <div class="panel panel-info">
+         <center class='date_tag'>
+         Hits:{{hitcount}}</center>
+     </div>
+     <p>&copy; All Rights Reserved</p>
+     <div class="panel panel-info">
+      <div class="panel-heading">Developed and Maintained by:  <a href='https://thakursc1.github.io/'>Saurabh, </a><a href='https://www.linkedin.com/in/ramasami-krishnaswami-907a42101'> Ramasami, </a><a href='https://www.linkedin.com/in/ayushjain19/'> Ayush, </a><a href='http://www.gw.iucaa.in/nikhil-mukund/'> Nikhil, </a><a href='https://scholar.google.com/citations?user=lTwGbNwAAAAJ&hl=en'>   Sheelu,</a><a href="https://sites.google.com/site/arunsworldonnet/home"> Arun,</a><a href="http://www.iucaa.in/~sanjit/home/About_Me.html"> Sanjit</a>
+
+      </div>
+  </div>
+  <input type = 'hidden' value = {{sessionId}} id="sessionId">
+  <div class="chatbot">
+    <button class="chatbutton" id="chatbutton" onclick="openchatbot()">H</button>
+    <div class="chatbox" id="chatbox" style="display: none;">
+        <div class="messagearea" id ="messagearea" style="overflow-y: scroll">
+            <button onclick="closechatbot()" class="closebutton">x</button>
+        </div>
+        <form onsubmit="return chat();">
+            <input type="text" id="inputarea" class="inputarea" autocomplete="off">
+        </form>
+    </div>
+</div>
+</footer>
+<!-- /container -->
+</div>
+</body>
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+
+        </html>

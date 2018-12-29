@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="static/styles/chatbot.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="static/js/chatbot.js"></script>
+</head>
+<body>
+    <div class="chatbot">
+        <button class="chatbutton" id="chatbutton" onclick="openchatbot()">H</button>
+        <div class="chatbox" id="chatbox" style="display: none;">
+            <div class="messagearea" id ="messagearea" style="overflow-y: scroll">
+                <button onclick="closechatbot()" class="closebutton">x</button>
+            </div>
+            <form onsubmit="return chat();">
+                <input type="text" id="inputarea" class="inputarea">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

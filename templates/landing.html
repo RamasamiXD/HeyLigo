@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hey Ligo</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/styles/vendor_landing/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/styles/vendor_landing/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="/static/styles/vendor_landing/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="/static/styles/creative.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Italianno');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+@import url('https://fonts.googleapis.com/css?family=Niconne');
+
+
+.tagline
+{
+font-family: 'Niconne', cursive;
+font-size: 50px !important;
+}
+.name{
+.col-half-offset{
+    margin-left:3.3%
+}
+
+.date_tag{
+  color:blue;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+</style>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="http://www.gw.iucaa.in/">Hosted at IUCAA</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>-->
+                    <li>
+                        <a class="page-scroll" href="#services">Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">HEY LIGO !</h1>
+                <hr>
+                <h2 class='tagline'>Helping you in listening to the cosmic whispers...  </h2>
+                <br>
+                <a href="/hauthors_titles" class="btn btn-primary btn-xl page-scroll"> Hanford </a>
+
+                <a href="/lauthors_titles" class="btn btn-primary btn-xl page-scroll">Livingston</a>
+
+                <a href="/vauthors_titles" class="btn btn-primary btn-xl page-scroll">Virgo</a>
+                
+                <a href="/gauthors_titles" class="btn btn-primary btn-xl page-scroll">GEO600</a>
+
+                <a href="/make_report" class="btn btn-primary btn-xl page-scroll">All</a>
+
+            </div>
+        </div>
+    </header>
+
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Informational Retrieval and Recommendation System built for Gravitational Wave Observatories</h2>
+                    <hr class="light">
+                    <p class="text-faded">Lets one know more about this multi-physics experiment by providing easy access to the efforts carried out to achieve the desired astrophysical sensitivity. This machine learning based interface answers user queries about the instrument by making use of archived activities undertaken at the observatories. The application identifies trending issues at the site and sends out alerts to subscribed users based on their interests.</p>
+		    <a href="https://doi.org/10.3847/1538-4365/aaadb2" class="page-scroll btn btn-default btn-xl sr-button">Hey LIGO Paper</a>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <section id="services">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Developed by</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-half-offset text-center">
+                    <div class="service-box">
+                    <a href="https://thakursc1.github.io/">
+                    <img src='{{ url_for("static", filename="img/thakur.jpg")}}' height="100px" width="100px" class="img-circle fa fa-4x fa-diamond text-primary sr-icons"></img>
+                        <h4>SAURABH THAKUR</h4></a>
+                        
+                        <p class="text-muted">Data Science Intern (IUCAA)</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-half-offset text-center">
+                    <div class="service-box">
+                        <a href="https://www.linkedin.com/in/ramasami-krishnaswami-907a42101">
+                        <img src="http://bit.ly/2PTlxct" height="100px" width="100px" class="img-circle fa fa-4x fa-diamond text-primary sr-icons"></img>
+                        <h4>RAMASAMI K</h4></a>
+                        <p class="text-muted">Research Intern in Computer Science (IUCAA)</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-half-offset text-center">
+                    <div class="service-box">
+                        <a href="https://www.linkedin.com/in/ayushjain19/">
+                        <img src="https://media.licdn.com/dms/image/C5103AQE8Y7Orz_s5OQ/profile-displayphoto-shrink_800_800/0?e=1545868800&v=beta&t=uD3YWivjFT3Bhs16lk8dUii7GysaYxpXkzHJPcnJtAI" height="100px" width="100px" class="img-circle fa fa-4x fa-diamond text-primary sr-icons"></img>
+                        <h4>AYUSH JAIN</h4></a>
+                        <p class="text-muted">Research Intern in Computer Science (IUCAA)</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-half-offset text-center">
+                    <div class="service-box">
+                        <a href="http://www.gw.iucaa.in/nikhil-mukund/">
+                        <img src="http://i2.wp.com/www.gw.iucaa.in/wp-content/uploads/2016/02/Nikhil_small.jpg?fit=400%2C401" height="100px" width="100px" class="img-circle fa fa-4x fa-diamond text-primary sr-icons"></img>
+                        <h4>NIKHIL MUKUND</h4></a>
+                        <p class="text-muted">Research Scholar (IUCAA)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-half-offset text-center">
+                    <div class="service-box">
+                       <a href="https://scholar.google.com/citations?user=lTwGbNwAAAAJ&hl=en"> <img src="https://scholar.google.com/citations?view_op=view_photo&user=lTwGbNwAAAAJ&citpid=2" height="100px" width="100px" class="img-circle fa fa-4x fa-diamond text-primary sr-icons"></img>
+                        <h4>SHEELU ABRAHAM</h4></a>
+                        <p class="text-muted">Postdoctoral Researcher (IUCAA)</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-half-offset text-center">
+                    <div class="service-box">
+                       <a href="https://sites.google.com/site/arunsworldonnet/home"> <img src="https://scholar.google.co.in/citations?view_op=view_photo&user=083pqKMAAAAJ&citpid=1" height="100px" width="100px" class="img-circle fa fa-4x fa-diamond text-primary sr-icons"></img>
+                        <h4>ARUN ANIYAN</h4></a>
+                        <p class="text-muted">Postdoctoral Researcher (SKA)</p>
+                    </div>
+                </div>
+
+        <div class="col-lg-3 col-half-offset text-center">
+                    <div class="service-box">
+                       <a href="http://www.iucaa.in/~sanjit/home/About_Me.html"> <img src="http://www.iucaa.in/~sanjit/home/About_Me_files/SMitra-Nov2011_lowRes.png" height="100px" width="110px" class="img-circle fa fa-4x fa-diamond text-primary sr-icons"></img>
+                        <h4>SANJIT MITRA</h4></a>
+                        <p class="text-muted"> Associate Professor (IUCAA)</p>
+                    </div>
+                </div>
+         
+         <div class="col-lg-3 col-half-offset text-center">
+                    <div class="service-box">
+                       <a href="http://vkaustubh.github.io/index.html"> <img src="http://vkaustubh.github.io/static/images/profile.jpg" height="100px" width="100px" class="img-circle fa fa-4x fa-diamond text-primary sr-icons"></img>
+                        <h4>KAUSTUBH VAGHMARE</h4></a>
+                        <p class="text-muted"> Data Scientist (IUCAA)</p>
+                    </div>
+                </div>       
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="primary">
+                    <p>We value your opinions. Please do share your ideas with us.</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x sr-contact"></i>
+                    <p>+91-20-25604-202</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a href="mailto:nlpligo@gmail.com">nlpligo@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <footer class='footer1'>
+           <div class="panel panel-info">
+           <center class='date_tag'>Hits:{{hitcount}}
+      </center>
+    </div>
+      </footer>
+
+    <!-- jQuery -->
+    <script src="/static/js/vendor_landing/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/vendor_landing/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/static/js/star.js"></script>
+    <script src="/static/js/p5.js"></script>
+    <script src="/static/js/vendor_landing/scrollreveal/scrollreveal.min.js"></script>
+    <script src="/static/js/vendor_landing/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="/static/js/creative.min.js"></script>
+
+</body>
+
+</html>
